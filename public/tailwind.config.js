@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./**/*.{html,js,php}",
-    "./node_modules/flowbite/**/*.js"
+    "../app/views/**/*.{html,js,php}"
   ],
   darkMode: 'class',
   theme: {
@@ -10,11 +9,8 @@ module.exports = {
       
     },
     backgroundImage: {
-      'img': "url('img/logo/headerbg.png')"
+      'img': "url('http://localhost/GLOWGURU/img/logo/footer.png')"
     }
   },
-  plugins: [
-    require('flowbite/plugin'),
-  ],
   
 }

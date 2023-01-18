@@ -20,7 +20,9 @@
             background-size: contain;
             background-position: bottom;
         }
-        
+        .gradient::before {
+            background-image: linear-gradient(to right, orange , yellow , orange);
+        }
         @font-face {
             src: url('css/font/ThunderDemo.ttf');
             font-family: Thunder;
@@ -62,7 +64,10 @@
                     </ul>
                 </div>
                 <div class="flex items-center">
-                    <a href="#" class="font-bold bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-600 text-gray-600 text-sm px-5 py-2 drop-shadow-[4px_4px_1px_rgb(255,150,0,0.50)]">Log in</a>
+                    <a href="#" class="relative flex items-center justify-center font-bold text-gray-600 text-sm px-5 py-2 hover:drop-shadow-[4px_4px_1px_rgb(255,150,0,0.50)] hover:transition-all hover:duration-300">
+                        <img src="img/logo/libg.png" alt="" class="w-28 h-11 absolute mt-2 ml-4 -z-10">
+                        Log in
+                    </a>
                 </div>
             </div>
         </nav>
