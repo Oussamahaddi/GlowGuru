@@ -1,8 +1,8 @@
 
 
     <footer class="relative h-full">
-        <img src="img/logo/footer.png" alt="" class="hidden sm:block w-full h-full">
-        <img src="img/logo/footermobile.png" alt="" class="sm:hidden w-full h-full">
+        <img src="<?= URLROOT; ?>/img/logo/footer.png" alt="" class="hidden sm:block w-full h-full">
+        <img src="<?= URLROOT; ?>/img/logo/footermobile.png" alt="" class="sm:hidden w-full h-full">
         <div class="w-full absolute bottom-0 left-1/2 sm:top-1/2 sm:left-1/2 -translate-x-1/2 px-4 max-sm:py-2">
             <div class="flex flex-col justify-around items-center h-full sm:flex-row pb-6">
                 <div class="grid place-items-center gap-2">

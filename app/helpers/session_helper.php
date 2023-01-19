@@ -1,5 +1,3 @@
-
-
 <?php 
 
     // create a session

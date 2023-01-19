@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- link of flowbite  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
+    <!-- load css file -->
+    <link href="./dist/output.css" rel="stylesheet">
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="<?php echo URLROOT; ?>/img/logo/GlowGuru.png"/>
     
     <title>Login</title>
 </head>
 <body>
 
-    <section class="bg-gray-900 bg-no-repeat bg-cover" style="background-image: url(<?= URLROOT . '/img/bg.png';?>);">
+    <section class="bg-[#ECE0DB] bg-no-repeat bg-cover" style="background-image: url(<?= URLROOT . '/img/bg.png';?>);">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -19,7 +24,13 @@
                         <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
                             Login
                         </h1>
-                        <a href="<?= URLROOT . '/Pages/index' ?>" class="w-fit py-2 px-4 bg-blue-600 text-white font-medium text-sm rounded-md shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out gap-2 "><i class="fa-solid fa-arrow-left-long"></i> Back To Home</a>
+                        <div class="flex items-center">
+                            <a href="<?= URLROOT . '/Pages/index'; ?>" class="relative flex items-center justify-center font-bold text-gray-600 text-sm px-5 py-2 hover:drop-shadow-[4px_4px_1px_rgb(255,150,0,0.50)] hover:transition-all hover:duration-300">
+                                <img src="img/logo/libg.png" alt="" class="w-28 h-11 absolute mt-2 ml-4 -z-10">
+                                <i class="fa-solid fa-arrow-left-long"></i> Back To Home
+                            </a>
+                        </div>
+                        
                     </div>
                     <form class="space-y-4 md:space-y-6" action="<?= URLROOT . '/Authentification/login' ?>" method="POST">
                         <div>

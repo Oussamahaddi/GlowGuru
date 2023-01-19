@@ -7,7 +7,7 @@
     <!-- link of flowbite  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
     <!-- load css file -->
-    <link href="./dist/output.css" rel="stylesheet">
+    <link href="<?= URLROOT; ?>/dist/output.css" rel="stylesheet">
     <!-- For favicon png -->
     <link rel="shortcut icon" type="image/icon" href="<?php echo URLROOT; ?>/img/logo/GlowGuru.png"/>
     
@@ -34,11 +34,11 @@
     </style>
 
 </head>
-<body class="" style="background-color: #ECE0DB">
+<body class="bg-[#ECE0DB]">
 
     <!-- header start -->
     <header class="relative">
-        <img src="img/logo/headerbg.png" alt="" class="absolute -z-10 w-full h-full">
+        <img src="<?= URLROOT; ?>/img/logo/headerbg.png" alt="" class="absolute -z-10 w-full h-full">
         <nav class="border-gray-200 px-4 md:px-6 py-2.5">
             <div class="flex justify-around items-center mx-auto max-w-screen-xl">
                 <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
@@ -64,8 +64,8 @@
                     </ul>
                 </div>
                 <div class="flex items-center">
-                    <a href="#" class="relative flex items-center justify-center font-bold text-gray-600 text-sm px-5 py-2 hover:drop-shadow-[4px_4px_1px_rgb(255,150,0,0.50)] hover:transition-all hover:duration-300">
-                        <img src="img/logo/libg.png" alt="" class="w-28 h-11 absolute mt-2 ml-4 -z-10">
+                    <a href="<?= URLROOT . '/SignIn/login'; ?>" class="relative flex items-center justify-center font-bold text-gray-600 text-sm px-5 py-2 hover:drop-shadow-[4px_4px_1px_rgb(255,150,0,0.50)] hover:transition-all hover:duration-300">
+                        <img src="<?= URLROOT; ?>/img/logo/libg.png" alt="" class="w-28 h-11 absolute mt-2 ml-4 -z-10">
                         Log in
                     </a>
                 </div>
@@ -73,3 +73,5 @@
         </nav>
     </header>
     <!-- header end -->
+
+    
