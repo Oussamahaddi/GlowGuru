@@ -3,17 +3,13 @@
 <?php
 
     class SignIn extends Controller {
-
-        private $db;
         private $admModule;
         public function __construct() {
-            $this->db = $this->model('Admin');
+            $this->admModule = $this->model('Admin');
         }
 
         ////////////////////////////////////////////// login method \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         public function login() {
-
-            $this->admModule = $this->model('Admin');
 
             // check for post
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
