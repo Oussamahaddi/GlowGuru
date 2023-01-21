@@ -24,24 +24,24 @@
 
 <!-- view all start -->
 <section class="relative my-24">
-	<img src="<?= URLROOT; ?>img/logo/newarrival.png" alt="" class="w-full absolute -z-10">
+	<img src="<?= URLROOT; ?>/img/logo/newarrival.png" alt="" class="w-full absolute -z-10">
 	<div class="relative w-5/6 m-auto">
 		<div class="my-8 text-end">
 			<h3 class="font-semibold tracking-widest">EXPLORE THE <span class="Thunder text-6xl text-[#E1726E]">PRODUCT<span></h3>
 		</div>
 		<div class="flex justify-center">
-			<img src="<?= URLROOT; ?>img/logo/" alt="">
+			<img src="<?= URLROOT; ?>/img/logo/" alt="">
 			<strong class="bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-600 px-3 py-1 -bottom-2 relative z-10">VIEW All</strong>
 		</div>
 		<div class="grid grid-cols-1 grid-rows-3 justify-items-center sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-1 gap-4">
 			<div class=" relative border overflow-hidden w-5/6">
-				<img src="<?= URLROOT; ?>img/product/pc/p1.png" alt="" class="w-full h-full cursor-pointer hover:scale-125 hover:transition-all hover:duration-500 hover:brightness-50">
+				<img src="<?= URLROOT; ?>/img/product/pc/p1.png" alt="" class="w-full h-full cursor-pointer hover:scale-125 hover:transition-all hover:duration-500 hover:brightness-50">
 			</div>
 			<div class=" relative border overflow-hidden w-5/6">
-				<img src="<?= URLROOT; ?>img/product/pc/p2.png" alt="" class="w-full h-full cursor-pointer hover:scale-125 hover:transition-all hover:duration-500 hover:brightness-50">
+				<img src="<?= URLROOT; ?>/img/product/pc/p2.png" alt="" class="w-full h-full cursor-pointer hover:scale-125 hover:transition-all hover:duration-500 hover:brightness-50">
 			</div>
 			<div class=" relative border overflow-hidden w-5/6">
-				<img src="<?= URLROOT; ?>img/product/pc/p5.jpg" alt="" class="w-full h-full cursor-pointer hover:scale-125 hover:transition-all hover:duration-500 hover:brightness-50">
+				<img src="<?= URLROOT; ?>/img/product/pc/p5.jpg" alt="" class="w-full h-full cursor-pointer hover:scale-125 hover:transition-all hover:duration-500 hover:brightness-50">
 			</div>
 		</div>
 	</div>

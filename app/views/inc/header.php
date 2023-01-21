@@ -15,7 +15,7 @@
 
     <style>
         .selected_li {
-            background-image: url('img/logo/libg.png');
+            background-image: url('<?= URLROOT; ?>/img/logo/libg.png');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: bottom;
@@ -24,7 +24,7 @@
             background-image: linear-gradient(to right, orange , yellow , orange);
         }
         @font-face {
-            src: url('css/font/ThunderDemo.ttf');
+            src: url('<?= URLROOT; ?>/css/font/ThunderDemo.ttf');
             font-family: Thunder;
         }
 
@@ -50,17 +50,16 @@
                 <div class=" hidden justify-between items-center w-fit sm:block md:w-auto" id="mobile-menu-2">
                     <ul class="nav_list flex max-sm:flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
                         <li class="selected_li">
-                            <a href="#" class="font-semibold h-full block py-2 text-gray-700 rounded bg-primary-700 md:bg-transparent md:text-primary-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                            <a href="#" class="font-semibold h-full block py-2 text-gray-700 rounded bg-primary-700 md:bg-transparent md:text-primary-700 md:p-0 " aria-current="page">Home</a>
                         </li>
                         <li class="">
-                            <a href="#" class="font-semibold h-full block py-2 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Company</a>
+                            <a href="#" class="font-semibold h-full block py-2 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0 ">Marketplace</a>
                         </li>
-                        <li class="">
-                            <a href="#" class="font-semibold h-full block py-2 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Marketplace</a>
-                        </li>
-                        <li class="">
-                            <a href="#" class="font-semibold h-full block py-2 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Features</a>
-                        </li>
+                        <?php if (isLoggedIn()) : ?>
+                            <li class="">
+                                <a href="<?= URLROOT . '/Dashboards/Statistique'; ?>" class="font-semibold h-full block py-2 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0 ">Dashboard</a>
+                            </li>
+                        <?php endif ; ?>
                     </ul>
                 </div>
                 <div class="flex items-center">

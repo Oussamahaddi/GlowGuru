@@ -1,3 +1,9 @@
+<?php
+    if (isLoggedIn()) {
+        redirect('Dashboards/Statistique');
+    }
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">

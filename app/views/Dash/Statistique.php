@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="<?php echo URLROOT; ?>/img/logo/GlowGuru.png"/>
     <title>Dashboard</title>
 </head>
 <body>
@@ -30,7 +32,7 @@
                         <div class="block w-px h-6 mx-3 bg-gray-400 dark:bg-gray-700"></div>
                     </li>
                     <li>
-                        <a href="<?= URLROOT . '/Authentification/logOutAdmin';?>" class="flex items-center mr-4 hover:text-blue-100">
+                        <a href="<?= URLROOT . '/SignIn/logOutAdmin';?>" class="flex items-center mr-4 hover:text-blue-100">
                             <span class="inline-flex mr-1">
                                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
                             </span>
@@ -60,7 +62,7 @@
                     </a>
                     </li>
                     <li>
-                        <a href="#" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+                        <a href="<?= URLROOT . '/Dashboards/product'; ?>" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
                             <span class="inline-flex justify-center items-center ml-4">
                                 <i class="fa-sharp fa-solid fa-boxes-stacked"></i>
                             </span>
@@ -90,5 +92,4 @@
 
 </body>
     <script src="https://kit.fontawesome.com/e3e5f279fe.js" crossorigin="anonymous"></script>
-    <script src="./frontend/js/addClub.js" type="module"></script>
 </html>

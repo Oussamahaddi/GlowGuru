@@ -32,7 +32,7 @@
 </body>
 
 
-    <script src="./js/header.js" type="module"></script>
+    <script src="<?= URLROOT; ?>/js/header.js" type="module"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <script src="https://kit.fontawesome.com/e3e5f279fe.js" crossorigin="anonymous"></script>
     <!-- <script>
