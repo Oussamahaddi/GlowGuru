@@ -30,7 +30,7 @@
                 // process form
                 $imgName = $_FILES['image']['name'];
                 $imgTmp = $_FILES['image']['tmp_name'];
-                move_uploaded_file($imgTmp, URLROOT . '/img/upload/' . $imgName);
+                move_uploaded_file($imgTmp, 'img/upload/' . $imgName);
 
                 // sanitize post data
                 $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -73,13 +73,13 @@
                 // check if there is no erreur
                 if (empty($data['product_name_err']) && empty($data['product_price_err']) && empty($data['product_quantity_err']) && empty($data['product_description_err']) && empty($data['product_image_err']) ) {
                     // check for validate email
-                    $insertProduct = $this->productModel->addProduct($data);
+                    $insertProduct = $this->productModel->add($data);
 
                     if ($insertProduct) {
-                        // create session
-                        die('succe');
+                        // redirect to product page
+                        redirect('Dashboards/product');
                     } else {
-                        die('ops');
+                        die('Something wrong !!!!');
                     }
                 } else {
                     // load view page with error
@@ -104,6 +104,120 @@
 
                 // load view
                 $this->view('Dash/addProduct', $data);
+            }
+        }
+
+        public function deleteProduct($id) {
+            // get response from data if deleted or not return true or false
+            if ($this->productModel->delet($id)) {
+                redirect('Dashboards/product');
+            } else {
+                die('ops');
+            }
+        }
+
+        public function editProduct($id) {
+            // check for post
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                // process form
+                $imgName = $_FILES['image']['name'];
+                $imgTmp = $_FILES['image']['tmp_name'];
+                move_uploaded_file($imgTmp, 'img/upload/' . $imgName);
+
+                // get product id
+                $productId = $this->productModel->getProductById($id);
+
+                // sanitize post data
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+                if (!empty($imgName)) {
+                    // init data
+                    $data = [
+                        'id' => $productId->id,
+                        'product_name' => trim($_POST['name']),
+                        'product_price' => trim($_POST['price']),
+                        'product_quantity' => trim($_POST['quantity']),
+                        'product_description' => trim($_POST['description']),
+                        'product_image' => trim($imgName),
+                        'product_name_err' => '',
+                        'product_price_err' => '',
+                        'product_quantity_err' => '',
+                        'product_description_err' => '',
+                        'product_image_err' => ''
+                    ];
+                } else {
+                    // init data without image
+                    $data = [
+                        'id' => $productId->id,
+                        'product_name' => trim($_POST['name']),
+                        'product_price' => trim($_POST['price']),
+                        'product_quantity' => trim($_POST['quantity']),
+                        'product_description' => trim($_POST['description']),
+                        'product_image' => $productId->product_image,
+                        'product_name_err' => '',
+                        'product_price_err' => '',
+                        'product_quantity_err' => '',
+                        'product_description_err' => '',
+                        'product_image_err' => ''
+                    ];
+                }
+
+                // validate email
+                if (empty($data['product_name'])) {
+                    $data['product_name_err'] = 'Please enter product name';
+                }
+                // validate password
+                if (empty($data['product_price'])) {
+                    $data['product_price_err'] = 'Please enter product price';
+                }
+                // validate password
+                if (empty($data['product_quantity'])) {
+                    $data['product_quantity_err'] = 'Please enter product quantity';
+                }
+                // validate password
+                if (empty($data['product_description'])) {
+                    $data['product_description_err'] = 'Please enter product description';
+                }
+
+                // check if there is no erreur
+                if (empty($data['product_name_err']) && empty($data['product_price_err']) && empty($data['product_quantity_err']) && empty($data['product_description_err'])) {
+                    // check for validate email
+                    $editProduct = $this->productModel->edit($data);
+
+                    if ($editProduct) {
+                        // redirect to product page
+                        redirect('Dashboards/product');
+                    } else {
+                        die('ops');
+                    }
+                } else {
+                    // load view page with error
+                    $this->view('Dash/editProduct', $data);
+                }
+
+
+            } else {
+                
+                // get product id
+                $productId = $this->productModel->getProductById($id);
+
+                // init data
+                $data = [
+                    'id' => $productId->id,
+                    'product_name' => $productId->product_name,
+                    'product_price' =>  $productId->product_price,
+                    'product_quantity' => $productId->product_quantity,
+                    'product_description' => $productId->product_description,
+                    'product_image' => $productId->product_image,
+                    'product_name_err' => '',
+                    'product_price_err' => '',
+                    'product_quantity_err' => '',
+                    'product_description_err' => '',
+                    'product_image_err' => ''
+                ];
+
+                // load view
+                $this->view('Dash/editProduct', $data);
             }
         }
 

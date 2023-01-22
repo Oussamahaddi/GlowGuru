@@ -53,7 +53,7 @@
                             <a href="#" class="font-semibold h-full block py-2 text-gray-700 rounded bg-primary-700 md:bg-transparent md:text-primary-700 md:p-0 " aria-current="page">Home</a>
                         </li>
                         <li class="">
-                            <a href="#" class="font-semibold h-full block py-2 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0 ">Marketplace</a>
+                            <a href="<?= URLROOT . '/Pages/marketplace'; ?>" class="font-semibold h-full block py-2 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0 ">Marketplace</a>
                         </li>
                         <?php if (isLoggedIn()) : ?>
                             <li class="">
