@@ -9,18 +9,20 @@
         }
 
         public function checkAdmin($email, $password) {
-            $this->db->query("SELECT * FROM admin WHERE email = :email AND password = :password");
+            $this->db->query("SELECT * FROM admin WHERE email = :email");
             $this->db->bind(":email", $email);
-            $this->db->bind(":password", $password);
+            // $this->db->bind(":password", $password);
 
             $row = $this->db->single();
 
             // check row
-            if ($this->db->rowCount() > 0) {
+            $hashed_password = $row->password;
+            if(password_verify($password,$hashed_password)){
                 return $row;
             } else {
                 return false;
             }
+
         }
 
     }

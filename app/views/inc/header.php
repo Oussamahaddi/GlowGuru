@@ -50,7 +50,7 @@
                 <div class=" hidden justify-between items-center w-fit sm:block md:w-auto" id="mobile-menu-2">
                     <ul class="nav_list flex max-sm:flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
                         <li class="selected_li">
-                            <a href="#" class="font-semibold h-full block py-2 text-gray-700 rounded bg-primary-700 md:bg-transparent md:text-primary-700 md:p-0 " aria-current="page">Home</a>
+                            <a href="<?= URLROOT . '/Pages/index'; ?>" class="font-semibold h-full block py-2 text-gray-700 rounded bg-primary-700 md:bg-transparent md:text-primary-700 md:p-0 " aria-current="page">Home</a>
                         </li>
                         <li class="">
                             <a href="<?= URLROOT . '/Pages/marketplace'; ?>" class="font-semibold h-full block py-2 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0 ">Marketplace</a>
