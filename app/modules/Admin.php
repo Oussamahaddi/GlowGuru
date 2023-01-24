@@ -25,4 +25,10 @@
 
         }
 
+        public function getAllAdmin() {
+            $this->db->query("SELECT * FROM admin");
+            $count = $this->db->resultSet();
+            return $count;
+        }
+
     }

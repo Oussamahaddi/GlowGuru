@@ -1,6 +1,7 @@
 
 
 let addMoreBtn = document.getElementById('add_more');
+let submitBtn = document.getElementById('submit');
 let form = document.getElementById('form');
 
 addMoreBtn.addEventListener('click', showForm);

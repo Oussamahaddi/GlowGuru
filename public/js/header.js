@@ -14,3 +14,13 @@ navBar.forEach(el => {
         
     })
 })
+
+
+let navBarBtn = document.getElementById('navBar');
+let navUl = document.getElementById('navBarBtn');
+
+navBarBtn.addEventListener('click', showNav);
+
+function showNav() {
+    navUl.classList.toggle('hidden');
+}

@@ -9,10 +9,15 @@
         }
         public function getStateProduct() {
             $this->db->query("SELECT * FROM products");
+            $state['count'] = $this->db->resultSet();
 
-            $this->db->execute();
+            $this->db->query("SELECT MIN(product_price) as minimum FROM products");
+            $state['MIN'] = $this->db->single();
 
-            return $this->db->rowCount();
+            $this->db->query("SELECT MAX(product_price) as maximum FROM products");
+            $state['MAX'] = $this->db->single();
+
+            return $state;
         }
 
         public function getAllProduct() {
@@ -75,4 +80,5 @@
             $row = $this->db->single();
             return $row;
         }
+
     }

@@ -1,6 +1,4 @@
-<?php
-    // print_r($_SESSION['Email']);
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,19 +74,32 @@
         <!-- ./Sidebar -->
 
         <!-- body -->
-        <div class="mt-24 h-full flex flex-wrap justify-around max-sm:flex-col max-sm:items-center col-start-2 col-span-2">
-
-            <div class="w-5/6 h-32 bg-gradient-to-r from-red-400 to-red-700 rounded-lg p-2">
-                <div>
-                    <i class="fa-sharp fa-solid fa-boxes-stacked"></i><span>Products -</span>
+        <div class="mt-24 ">
+            <div class="text-center text-2xl font-semibold">Welcome Back <span class="text-yellow-500 text-3xl"><?= $_SESSION['Name']; ?></span></div>
+            <div class="mt-12 h-full grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <div class="w-5/6 mx-auto flex flex-col justify-around items-center h-32 bg-white text-black rounded-lg p-2">
+                    <div>
+                    <span class="text-md font-semibold">- Admin - </span><i class="fa-solid fa-khanda text-2xl text-yellow-500"></i>
+                    </div>
+                    <div class="font-semibold text-md"><?= count($data['admin']); ?></div>
                 </div>
-                <div><?= $data['products_stats']?></div>
+                <div class="w-5/6 mx-auto flex flex-col justify-around items-center h-32 bg-white text-black rounded-lg p-2">
+                    <div>
+                        <span class="text-md font-semibold">- Min Prix - </span><i class="fa-solid fa-arrow-down-long text-2xl text-green-500 -rotate-45"></i>
+                    </div>
+                    <div class="font-semibold text-md">$<?= $data['products_stats']['MIN']->minimum; ?></div>
+                </div>
+                <div class="w-5/6 mx-auto flex flex-col justify-around items-center h-32 bg-white text-black rounded-lg p-2">
+                    <div>
+                        <span class="text-md font-semibold">- Max Prix - </span><i class="fa-solid fa-arrow-down-long text-2xl text-red-500 rotate-180"></i>
+                    </div>
+                    <div class="font-semibold text-md">$<?= $data['products_stats']['MAX']->maximum; ?></div>
+                </div>
             </div>
-
         </div>
         <!-- ./body -->
     </div>
-  </div>
+</div>
 
 </body>
     <script src="https://kit.fontawesome.com/e3e5f279fe.js" crossorigin="anonymous"></script>

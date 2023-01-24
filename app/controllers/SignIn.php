@@ -72,6 +72,7 @@
         public function createSession($unkown) {
             // create session of admin and client
             $_SESSION['Email'] = $unkown->email;
+            $_SESSION['Name'] = $unkown->name;
 
             redirect('Dashboards/statistique');
         }
