@@ -14,10 +14,10 @@
 
 
 <div>
-    <div class="overflow-y-scroll h-screen grid grid-cols-[auto_1fr] antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
+    <div class="overflow-y-scroll h-screen grid grid-cols-[auto_1fr] antialiased bg-[#ECE0DB]">
 
         <!-- Header -->
-        <div class="fixed w-full max-sm:h-10 flex items-center justify-between text-white z-20 bg-gray-800">
+        <div class="fixed w-full max-sm:h-12 flex items-center justify-between z-20 bg-white text-black">
             <div class="flex items-center justify-start md:justify-center pl-3 w-14 md:w-64 border-none">
                 <a href="<?= URLROOT . '/Pages/index'; ?>" class="w-full flex justify-center p-2"> <img class="w-7 h-7 md:w-2/6 md:h-full mr-2 rounded-md overflow-hidden" src="<?= URLROOT . '/img/logo/glowguru.png';?>" /></a>
             </div>
@@ -43,7 +43,7 @@
         <!-- ./Header -->
     
         <!-- Sidebar -->
-        <div class="mt-12 flex flex-col top-14 left-0 hover:w-64 md:w-64 bg-blue-900 dark:bg-gray-900 h-full text-white transition-all duration-300 border-none z-10 sidebar">
+        <div class="mt-12 flex flex-col top-14 left-0 hover:w-64 md:w-64 bg-[#E1726E] h-full text-white transition-all duration-300 border-none z-10 sidebar">
             <div class="overflow-y-auto overflow-x-hidden flex flex-col justify-between flex-grow">
                 <ul class="flex flex-col py-4 space-y-1">
                     <li class="px-5 hidden md:block">
@@ -56,7 +56,7 @@
                             <span class="inline-flex justify-center items-center ml-4">
                                 <i class="fa-solid fa-gauge"></i>
                             </span>
-                            <span class="ml-2 text-sm tracking-wide truncate">Statistiques</span>
+                            <span class="max-sm:hidden ml-2 text-sm tracking-wide truncate">Statistiques</span>
                         </a>
                     </li>
                     <li>
@@ -64,7 +64,7 @@
                             <span class="inline-flex justify-center items-center ml-4">
                                 <i class="fa-sharp fa-solid fa-boxes-stacked"></i>
                             </span>
-                            <span class="ml-2 text-sm tracking-wide truncate">Products</span>
+                            <span class="max-sm:hidden ml-2 text-sm tracking-wide truncate">Products</span>
                         </a>
                     </li>
                 </ul>
@@ -74,18 +74,18 @@
         <!-- ./Sidebar -->
 
         <!-- body -->
-        <div class="mt-24 relative">
+        <div class="mt-24 relative overflow-x-scroll">
 
             <!-- add button -->
             <div class="flex justify-end mr-4">
-                <a href="<?= URLROOT . '/Dashboards/addProduct'; ?>" class="text-end fixed p-2 w-12 aspect-square bg-blue-500 rounded-full cursor-pointer flex items-center justify-center">
+                <a href="<?= URLROOT . '/Dashboards/addProduct'; ?>" class="text-white text-end fixed p-2 w-12 aspect-square bg-[#E1726E] rounded-full cursor-pointer flex items-center justify-center">
                     <i class="fa-solid fa-plus text-3xl"></i>
                 </a>
             </div>
 
             <!-- component -->
             <div class=" rounded-lg border border-gray-200 shadow-md m-5">
-                <table class="w-full border-collapse bg-white text-left text-sm text-gray-500 ">
+                <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
                     <thead class="bg-gray-100">
                         <tr class="">
                             <th scope="col" class="px-6 py-4 font-bold text-gray-900">Product Name</th>

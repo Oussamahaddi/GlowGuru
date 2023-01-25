@@ -14,10 +14,10 @@
 
 
 <div>
-    <div class="overflow-hidden h-screen grid grid-cols-[auto_1fr] antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
+    <div class="overflow-hidden h-screen grid grid-cols-[auto_1fr] antialiased bg-white bg-[#ECE0DB] text-black ">
 
         <!-- Header -->
-        <div class="fixed w-full max-sm:h-10 flex items-center justify-between text-white z-20 bg-gray-800">
+        <div class="fixed w-full max-sm:h-12 flex items-center justify-between text-white z-20 bg-white">
             <div class="flex items-center justify-start md:justify-center pl-3 w-14 md:w-64 border-none">
                 <a href="<?= URLROOT . '/Pages/index'; ?>" class="w-full flex justify-center p-2"> <img class="w-7 h-7 md:w-2/6 md:h-full mr-2 rounded-md overflow-hidden" src="<?= URLROOT . '/img/logo/glowguru.png';?>" /></a>
             </div>
@@ -30,7 +30,7 @@
                         <div class="block w-px h-6 mx-3 bg-gray-400 dark:bg-gray-700"></div>
                     </li>
                     <li>
-                        <a href="<?= URLROOT . '/SignIn/logOutAdmin';?>" class="flex items-center mr-4 hover:text-blue-100">
+                        <a href="<?= URLROOT . '/SignIn/logOutAdmin';?>" class="text-black flex items-center mr-4 hover:text-blue-100">
                             <span class="inline-flex mr-1">
                                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
                             </span>
@@ -43,7 +43,7 @@
         <!-- ./Header -->
     
         <!-- Sidebar -->
-        <div class="mt-12 flex flex-col top-14 left-0 hover:w-64 md:w-64 bg-blue-900 dark:bg-gray-900 h-full text-white transition-all duration-300 border-none z-10 sidebar">
+        <div class="mt-12 flex flex-col top-14 left-0 hover:w-64 md:w-64 bg-[#E1726E] h-full text-white transition-all duration-300 border-none z-10 sidebar">
             <div class="overflow-y-auto overflow-x-hidden flex flex-col justify-between flex-grow">
                 <ul class="flex flex-col py-4 space-y-1">
                     <li class="px-5 hidden md:block">
@@ -56,7 +56,7 @@
                         <span class="inline-flex justify-center items-center ml-4">
                             <i class="fa-solid fa-gauge"></i>
                         </span>
-                        <span class="ml-2 text-sm tracking-wide truncate">Statistiques</span>
+                        <span class="max-sm:hidden ml-2 text-sm tracking-wide truncate">Statistiques</span>
                     </a>
                     </li>
                     <li>
@@ -64,7 +64,7 @@
                             <span class="inline-flex justify-center items-center ml-4">
                                 <i class="fa-sharp fa-solid fa-boxes-stacked"></i>
                             </span>
-                            <span class="ml-2 text-sm tracking-wide truncate">Products</span>
+                            <span class="max-sm:hidden ml-2 text-sm tracking-wide truncate">Products</span>
                         </a>
                     </li>
                 </ul>
@@ -75,8 +75,10 @@
 
         <!-- body -->
         <div class="mt-24 ">
-            <div class="text-center text-2xl font-semibold">Welcome Back <span class="text-yellow-500 text-3xl"><?= $_SESSION['Name']; ?></span></div>
-            <div class="mt-12 h-full grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div class="text-center text-2xl font-semibold">Welcome Back <span class="text-yellow-500 text-3xl">
+                <?= $_SESSION['Name']; ?></span>
+            </div>
+            <div class="mt-12 h-full grid grid-cols-1 sm:grid-cols-3 gap-8 ">
                 <div class="w-5/6 mx-auto flex flex-col justify-around items-center h-32 bg-white text-black rounded-lg p-2">
                     <div>
                     <span class="text-md font-semibold">- Admin - </span><i class="fa-solid fa-khanda text-2xl text-yellow-500"></i>
